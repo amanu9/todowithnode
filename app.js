@@ -5,7 +5,7 @@ const todoRoute=require("./routes/todoRoute");
 const dotenv=require("dotenv")
 
 dotenv.config(); // to use the enviroment variable
-console.log(process.env.NAME);
+// console.log(process.env.NAME);
 // init app
 const app = express();
 connectionMongoose();// calleding the connection above

@@ -10,10 +10,14 @@ router.get("/",todo.homeController);// using controller on our routes
   router.get("/add-todo",todo.addtodocontroller);
 
   //update
-  router.get("/update-todo", todo.updateTodocontroller);// passing id
+router.get("/update-todo", todo.updateTodoFormController);
   // delete
-    router.get("/delete-todo",todo.deleteTodocontroller);
+    router.get("/delete-todo",todo.deleteTodoPageController);
+
+router.get("/confirm-delete", todo.deleteTodocontroller);
   //add post
  router.post("/add-todo", todo.addTodoTodbcontroller);
+ router.post("/update-todo/:id", todo.updateTodoController);
+ 
 
   module.exports=router// to use ather place we have to export it
